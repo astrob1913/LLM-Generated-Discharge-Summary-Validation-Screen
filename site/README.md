@@ -4,8 +4,8 @@ An interactive screen that sets a language-model-generated hospital discharge su
 ward notes it was written from, and asks a clinician to decide, line by line, whether the record
 supports each statement.
 
-**Live page:** https://USERNAME.github.io/REPONAME/
-**Companion notes:** https://USERNAME.github.io/REPONAME/guide.html
+**Live page:** https://astrob1913.github.io/LLM-Generated-Discharge-Summary-Validation-Screen/
+**Companion notes:** https://astrob1913.github.io/LLM-Generated-Discharge-Summary-Validation-Screen/guide.html
 
 ## All clinical data here is synthetic
 
