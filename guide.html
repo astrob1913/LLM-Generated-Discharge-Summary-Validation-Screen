@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Using the validation screen</title>
+<meta name="description" content="What the validation screen shows, what every part of it means, and what it does not do.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* The guide deliberately carries no device gate. The screen itself needs a wide
+   window because it is a two-column comparison; this page is prose and should be
+   readable anywhere, including before someone gets to a computer. */
+:root{
+  --ground:#EEF0F4; --surface:#FFFFFF; --sunk:#EDEFF3;
+  --ink:#151A21; --ink-2:#4A5563; --ink-3:#7A8494;
+  --rule:#DCE0E7; --rule-strong:#B4BCC8;
+  --accent:#2C5AA0; --accent-soft:#E1E9F6;
+  --ok:#2C6B4F; --ok-soft:#E3F0E8;
+  --warn:#B8790C; --warn-soft:#FAEED6;
+  --bad:#A82A21; --bad-soft:#F9E4E2;
+  --grey:#8B93A0;
+  --shadow:0 1px 2px rgba(21,26,33,.06),0 6px 20px -10px rgba(21,26,33,.18);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0B0E12; --surface:#161A21; --sunk:#1D222A;
+  --ink:#E7EAF0; --ink-2:#AEB6C2; --ink-3:#7C8593;
+  --rule:#292F39; --rule-strong:#3C4450;
+  --accent:#5B8ED4; --accent-soft:#1C2839;
+  --ok:#6DBE96; --ok-soft:#17281F;
+  --warn:#D9971F; --warn-soft:#2C2415;
+  --bad:#C4483E; --bad-soft:#32201E;
+  --grey:#79818E;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 6px 20px -10px rgba(0,0,0,.7);
+}}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);
+  font-family:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:16px;line-height:1.62;padding:0 16px}
+.wrap{max-width:720px;margin:0 auto;padding:44px 0 72px}
+
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h1{font-family:'Source Serif 4',Georgia,serif;font-size:30px;line-height:1.24;
+  letter-spacing:-.015em;margin:0 0 14px;font-weight:600}
+h2{font-family:'Source Serif 4',Georgia,serif;font-size:21px;line-height:1.3;
+  margin:42px 0 12px;font-weight:600;letter-spacing:-.01em;
+  padding-top:18px;border-top:1px solid var(--rule)}
+h3{font-size:15px;margin:26px 0 7px;font-weight:600;letter-spacing:-.005em}
+p{margin:0 0 14px;color:var(--ink-2)}
+p strong,li strong{color:var(--ink);font-weight:600}
+a{color:var(--accent)}
+ul,ol{margin:0 0 14px;padding-left:22px;color:var(--ink-2)}
+li{margin-bottom:9px}
+.lede{font-size:17.5px;color:var(--ink);line-height:1.6}
+
+.synth{display:inline-block;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;
+  font-weight:600;color:var(--warn);background:var(--warn-soft);border:1px solid var(--warn);
+  border-radius:5px;padding:3px 8px;margin-bottom:16px}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:11px;
+  padding:18px 20px;margin:0 0 18px;box-shadow:var(--shadow)}
+.card p:last-child,.card ul:last-child,.card ol:last-child{margin-bottom:0}
+.card h3:first-child{margin-top:0}
+
+.note{background:var(--sunk);border:1px solid var(--rule);border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0;padding:14px 16px;margin:0 0 18px;font-size:14.5px}
+.note p:last-child{margin-bottom:0}
+.warnbox{background:var(--warn-soft);border:1px solid var(--warn);border-radius:8px;
+  padding:14px 16px;margin:0 0 18px;font-size:14.5px;color:var(--ink)}
+.warnbox p:last-child{margin-bottom:0}
+
+/* the key: swatches that match the screen exactly */
+dl.key{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 12px;align-items:baseline}
+dl.key dt{white-space:nowrap}
+dl.key dd{margin:0;color:var(--ink-2);font-size:14.5px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;vertical-align:middle}
+.dot.ok{background:var(--ok)} .dot.warn{background:var(--warn)}
+.dot.bad{background:var(--bad)} .dot.grey{background:var(--grey)}
+.sw{display:inline-block;width:17px;height:17px;border-radius:5px;color:#fff;
+  font-size:11px;font-weight:700;text-align:center;line-height:17px;vertical-align:middle}
+.sw.tick{background:var(--ok)} .sw.flag{background:var(--bad)}
+.hl{background:var(--accent-soft);border-bottom:2px solid var(--accent);
+  padding:0 3px;border-radius:2px;color:var(--ink)}
+.nc{background:var(--warn-soft);border-bottom:2px solid var(--warn);
+  padding:0 3px;border-radius:2px;color:var(--ink)}
+
+/* table-layout:fixed so a long cell cannot widen the table past the column — a
+   first draft used white-space:nowrap on the label column and the two-column
+   table in §7, whose first column is prose, pushed the page 510px wider than the
+   window at desktop size. Every cell wraps; the widths are set per table. */
+table{width:100%;table-layout:fixed;border-collapse:collapse;margin:0 0 18px;font-size:14.5px}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--rule);
+  vertical-align:top;color:var(--ink-2);overflow-wrap:break-word}
+th{color:var(--ink);font-weight:600;font-size:12px;letter-spacing:.03em;
+  text-transform:uppercase;border-bottom:1px solid var(--rule-strong)}
+td:first-child{color:var(--ink);font-weight:500}
+table.label-first th:first-child,table.label-first td:first-child{width:34%}
+table.halves th,table.halves td{width:50%}
+@media (max-width:560px){
+  th,td{padding:8px 6px}
+  table.label-first th:first-child,table.label-first td:first-child{width:40%}
+}
+
+code,.mono{font-family:'IBM Plex Mono',monospace;font-size:.88em;
+  background:var(--sunk);padding:1px 5px;border-radius:4px}
+
+.open{display:inline-block;font-weight:600;font-size:14.5px;padding:11px 18px;
+  border-radius:8px;border:1px solid var(--accent);background:var(--accent-soft);
+  color:var(--accent);text-decoration:none}
+.open:hover{background:var(--accent);color:#fff}
+
+.toc{background:var(--surface);border:1px solid var(--rule);border-radius:11px;
+  padding:16px 20px;margin:0 0 30px}
+.toc p{margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:10px;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.toc ol{margin:0;padding-left:20px;font-size:14.5px}
+.toc li{margin-bottom:4px}
+
+footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--rule);
+  font-size:12.5px;line-height:1.6;color:var(--ink-3)}
+footer p{color:var(--ink-3);font-size:12.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="eyebrow">Using the validation screen</p>
+  <h1>What this screen shows, what every part of it means, and what it does not do</h1>
+  <span class="synth">Synthetic record &mdash; no real patient</span>
+
+  <p class="lede">The screen sets a discharge summary written by a language model beside all thirty
+  ward notes it was written from, and asks a reviewer to decide, line by line, whether the record
+  supports each statement. This page explains it. Nothing here needs to be read before opening the
+  screen &mdash; it is written so that any part can be looked up afterwards.</p>
+
+  <p><a class="open" href="index.html">Open the validation screen &rarr;</a></p>
+
+  <div class="toc">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#why">Why the screen exists</a></li>
+      <li><a href="#before">Before you start</a></li>
+      <li><a href="#steps">The five steps</a></li>
+      <li><a href="#parts">Every part of the screen</a></li>
+      <li><a href="#marks">What the colours and marks mean</a></li>
+      <li><a href="#counters">The two counters</a></li>
+      <li><a href="#computed">What the screen works out, and what was written by hand</a></li>
+      <li><a href="#limits">What the screen does not do</a></li>
+    </ol>
+  </div>
+
+  <!-- ─────────────────────────────────────────────────────────── -->
+  <h2 id="why">1. Why the screen exists</h2>
+
+  <p>When a patient leaves hospital, a discharge summary goes to their GP. It is often the only
+  account the GP receives of what happened. A language model can now draft that letter from the
+  patient&rsquo;s notes, but a clinician still has to check it and sign it &mdash; and the clinician
+  checking it usually did not look after that patient.</p>
+
+  <p>Checking the letter on its own is not enough, for one reason above all others. <strong>An
+  omission leaves no trace.</strong> If the model drops something, there is nothing in the letter to
+  notice. A reviewer can read it from top to bottom, find every sentence properly supported, and
+  still have missed notes the model never used. The only way to catch that is to account for the
+  record as well as the document.</p>
+
+  <p>So the screen does two things at once: it walks through every statement in the summary, and it
+  accounts for every note in the record. It offers no score, no percentage and no ranking, and it
+  never tells the reviewer which problem matters most.</p>
+
+  <!-- ─────────────────────────────────────────────────────────── -->
+  <h2 id="before">2. Before you start</h2>
+
+  <div class="card">
+    <h3>It needs a laptop or desktop</h3>
+    <p>The screen refuses a browser window narrower than 820&nbsp;pixels or shorter than 560. It is a
+    two-column comparison with a five-day chart and a thirty-record grid, and a phone cannot show
+    them together. If the refusal notice appears on a computer, widening the window clears it. There
+    is a link at the foot of that notice for anyone who wants to look regardless.</p>
+
+    <h3>Nothing you type leaves your browser</h3>
+    <p>Ticks, flags and typed reasons are kept on your own device. They are not sent anywhere, and
+    nobody else can see them.</p>
+
+    <h3>You can stop and come back</h3>
+    <p>The review is saved as you go and restored when the page is opened again, with a line at the
+    top saying how many checks were already made and when they were last saved. A thirty-four
+    statement document does not have to be finished in one sitting.</p>
+
+    <h3>The patient is invented</h3>
+    <p>Every name, identifier, note and date on the screen comes from a synthetic dataset. No real
+    person, record or NHS number appears anywhere.</p>
+  </div>
+
+  <!-- ─────────────────────────────────────────────────────────── -->
+  <h2 id="steps">3. The five steps</h2>
+
+  <p>The same five steps are inside the screen, behind the <em>How do I use this screen?</em> button
+  in the key bar.</p>
+
+  <ol>
+    <li><strong>Read one line of the summary and click it.</strong> The evidence panel then shows
+    only the records that bear on that line, and nothing else. On a wide screen the evidence sits
+    beside the summary; on a narrower one it sits below it.</li>
+
+    <li><strong>Look at the evidence.</strong> Click any record in the list to see the exact row it
+    came from, word for word, with the file name and row number. You get the whole note, not an
+    extract, so the box scrolls &mdash; and it opens at the line the summary drew on. Nothing is
+    paraphrased and nothing is cut out, including the typing errors in the original.</li>
+
+    <li><strong>Say what you think.</strong> Press <span class="sw tick">&#10003;</span> if the line
+    is fine, or <span class="sw flag">!</span> if something is wrong with it, then type one line
+    saying what. Every problem appears on a list at the bottom of the screen, with the record that
+    proves it, ready to copy and send back.</li>
+
+    <li><strong>The researcher&rsquo;s reading is folded away.</strong> Wherever a dashed <em>Show
+    the researcher&rsquo;s reading</em> button appears, there is a sentence written by hand for this
+    demonstration saying what the researcher makes of that line. Nothing on the screen computed it.
+    It is folded so a reviewer can form their own view first. Open them one at a time, or switch them
+    all on with the button in the key bar.</li>
+
+    <li><strong>Deal with the leftovers</strong> in the strip at the bottom. Those are notes from the
+    admission that no line of the summary uses. Either they did not need to be in the summary
+    (press <em>Accept</em>) or something was left out (press <em>Read all</em>).</li>
+  </ol>
+
+  <!-- ─────────────────────────────────────────────────────────── -->
+  <h2 id="parts">4. Every part of the screen</h2>
+
+  <p>Described in the order you meet them, from the top of the page down.</p>
+
+  <div class="card">
+    <h3>The frame at the top</h3>
+    <p>Patient banner, the two counters, the <em>Approve and send</em> button, the colour key, and a
+    one-line instruction that changes as you work. It stays on screen so the state of the review is
+    never out of view. On a narrow window the key collapses behind a <em>Key</em> button and opens
+    when pressed.</p>
+  </div>
+
+  <div class="card">
+    <h3>Overview &mdash; every section against all thirty records</h3>
+    <p>A grid: each section of the summary down the side, the thirty records across the top in the
+    order they were written. Each small square is one record, coloured by what that record does to
+    that section. A wider gap between columns marks the start of a new day. This is for locating risk
+    before reading anything &mdash; a row with red squares late in the admission is worth opening
+    first. Clicking a row jumps to that section.</p>
+  </div>
+
+  <div class="card">
+    <h3>Against the PRSB standard</h3>
+    <p>Folded away until opened. The PRSB eDischarge Summary Standard lists twenty-two sections at
+    three conformance levels &mdash; six mandatory, ten required, six optional. The panel prints all
+    twenty-two and marks each present or absent in this summary. <strong>A section the model never
+    wrote has no line to check</strong>, so it would otherwise be invisible; this is where it shows.
+    An absent mandatory or required section carries the same pair of marks as a statement and must be
+    answered for. Absent optional sections are shown but not gated, because leaving one out breaks no
+    rule.</p>
+  </div>
+
+  <div class="card">
+    <h3>The generated summary, on the left</h3>
+    <p>The letter exactly as the model wrote it. Every line is a control. Each carries the two marks,
+    a coloured dot showing what the record does to it, and the conformance level of its section.
+    Marking a line as a problem opens a one-line box for the reason and lets a record be attached as
+    proof.</p>
+  </div>
+
+  <div class="card">
+    <h3>Evidence in time, on the right</h3>
+    <p>When a statement is selected, the records that bear on it are placed on the admission&rsquo;s
+    time axis in three rows &mdash; emergency, ward and medical, therapies &mdash; because where a
+    piece of evidence sits is itself informative. A rule at the bottom shows the stretch of time the
+    evidence covers. A dot off the axis on the left means no record bears on the statement at all.
+    Clicking any dot opens that record.</p>
+  </div>
+
+  <div class="card">
+    <h3>The record cards, beneath</h3>
+    <p>The ward notes themselves, in full and exactly as written, with the file name and row number.
+    Inside each card the clause the summary took is <span class="hl">marked in blue</span>, and a
+    clause that no statement in the summary carries is <span class="nc">underlined in amber</span>. A
+    clause is never both.</p>
+    <p>Most notes are longer than the box, so the card scrolls and <strong>opens at the highlighted
+    clause rather than at the top</strong>. A soft fade at the top or bottom edge means there is more
+    text in that direction.</p>
+  </div>
+
+  <div class="card">
+    <h3>The dose panel, for a medication</h3>
+    <p>A medication is not a single fact but a value that moves through the admission, so selecting a
+    drug statement opens a second chart: every record naming that drug placed in time, with the
+    interval the summary reports shaded. Chips beneath list every change in order. The sentence under
+    the chart is generated by counting the points, not written by hand.</p>
+  </div>
+
+  <div class="card">
+    <h3>Problems found</h3>
+    <p>Everything flagged, each with its typed reason and the record attached as proof, and a copy
+    control. This is what leaves the screen.</p>
+  </div>
+
+  <div class="card">
+    <h3>The two accounting strips, at the foot</h3>
+    <p><strong>Records not used by any statement.</strong> Notes from the admission that no line of
+    the summary draws on, grouped so a whole group can be accepted in one decision, or read in full
+    first.</p>
+    <p><strong>Lines inside used records that no statement covers.</strong> A record counts as used
+    the moment one statement draws on it &mdash; but a note can support one line of the summary and
+    still contain an instruction that reaches the letter nowhere. Those passages are listed
+    separately, quoted from the source row, and decided one at a time. Without this strip a record
+    could be counted as fully accounted for while something important inside it had been read by
+    nobody.</p>
+  </div>
+
+  <!-- ─────────────────────────────────────────────────────────── -->
+  <h2 id="marks">5. What the colours and marks mean</h2>
+
+  <h3>The two you press</h3>
+  <dl class="key">
+    <dt><span class="sw tick">&#10003;</span></dt><dd>this line is fine</dd>
+    <dt><span class="sw flag">!</span></dt><dd>something&rsquo;s wrong with it</dd>
+  </dl>
+  <p style="margin-top:12px">Pressing the same mark again clears it. Setting a mark also selects the
+  line, so the evidence is on screen at the moment of judging.</p>
+
+  <h3>The dot beside each line &mdash; what the record does to it</h3>
+  <dl class="key">
+    <dt><span class="dot ok"></span></dt><dd>the record backs it up</dd>
+    <dt><span class="dot warn"></span></dt><dd>the record says more than the summary does</dd>
+    <dt><span class="dot bad"></span></dt><dd>the record disagrees, or nothing supports it</dd>
+    <dt><span class="dot grey"></span></dt><dd>the record cannot settle it</dd>
+  </dl>
+
+  <h3>Inside a record card</h3>
+  <dl class="key">
+    <dt><span class="hl">blue</span></dt><dd>the clause the summary took from this note</dd>
+    <dt><span class="nc">amber</span></dt><dd>a clause in this note that no statement carries</dd>
+  </dl>
+
+  <div class="note" style="margin-top:16px">
+    <p>These two never overlap. A clause is either one or the other, never both, and that is true by
+    the way the screen is built rather than by anyone checking it each time.</p>
+  </div>
+
+  <!-- ─────────────────────────────────────────────────────────── -->
+  <h2 id="counters">6. The two counters</h2>
+
+  <p>The <em>Approve and send</em> button stays locked until both are full. That is the whole
+  guarantee the screen offers, so it is worth understanding exactly what each one counts.</p>
+
+  <table class="label-first">
+    <tr><th>Counter</th><th>What it counts</th></tr>
+    <tr>
+      <td>Checks decided</td>
+      <td>Every decision the review requires: each statement in the summary, each absent mandatory or
+      required PRSB section, and each line inside a used record that nothing carries. All three kinds
+      must be answered.</td>
+    </tr>
+    <tr>
+      <td>Records accounted for</td>
+      <td>How many of the thirty ward notes have been dealt with. A note counts either because at
+      least one statement draws on it, or because the reviewer has explicitly accepted a group of
+      unused notes as having nothing that needed to reach the summary.</td>
+    </tr>
+    <tr>
+      <td>Problems found</td>
+      <td>How many lines have been flagged so far. Not a target &mdash; simply a running count.</td>
+    </tr>
+  </table>
+
+  <div class="warnbox">
+    <p><strong>The second counter does not start at zero, and that is not a bug.</strong> It opens
+    part-full because the summary already draws on most of the record. What is left is the handful of
+    notes no statement uses &mdash; and those are the ones a reviewer would otherwise never see,
+    which is exactly why the counter exists. Read it as <em>&ldquo;this many of the thirty have been
+    dealt with&rdquo;</em>, not as <em>&ldquo;this much of my work is done&rdquo;</em>.</p>
+  </div>
+
+  <!-- ─────────────────────────────────────────────────────────── -->
+  <h2 id="computed">7. What the screen works out, and what was written by hand</h2>
+
+  <p>This distinction matters more than anything else on this page, and the screen states it in its
+  own footer too.</p>
+
+  <table class="halves">
+    <tr><th>Worked out by the screen</th><th>Written by hand for this demonstration</th></tr>
+    <tr>
+      <td>The counts and both counters. Whether each PRSB section is present or absent, and which
+      absences must be answered for. The sentence under the dose chart. The placing of records on the
+      time axis. Which checks remain.</td>
+      <td>Which records bear on which statement. Which clause inside a record the summary took. The
+      list of lines that nothing carries. Every sentence behind a <em>Show the researcher&rsquo;s
+      reading</em> button, and every sentence describing an absent section.</td>
+    </tr>
+  </table>
+
+  <p>So when the screen says &ldquo;nothing found&rdquo; for an absent section, that is a person
+  having read all thirty records, not a search result. The links between statement and record were
+  matched by hand for this one episode, and every one of them can be read back from the source row
+  printed on the card.</p>
+
+  <!-- ─────────────────────────────────────────────────────────── -->
+  <h2 id="limits">8. What the screen does not do</h2>
+
+  <ul>
+    <li><strong>It does not compute its own links.</strong> The candidate records shown for each
+    statement were matched by hand for this episode. A deployed version would propose ranked
+    candidates that the reviewer can overrule; this one demonstrates the mechanism, not the
+    extraction.</li>
+
+    <li><strong>It does not rank anything.</strong> There is no score, no percentage, no confidence
+    rating and no ordering by severity. Statements appear in the order the model wrote them. An
+    interface that points at three problems has implied the rest are fine, and this one refuses to
+    make that claim.</li>
+
+    <li><strong>It guarantees attention, not correctness.</strong> A reviewer can mark every check
+    without reading any of them. Nothing prevents that. What the screen guarantees is that nothing
+    was passed over without a decision being recorded.</li>
+
+    <li><strong>It covers one admission.</strong> Everything on the page belongs to a single
+    synthetic episode of thirty notes over five days.</li>
+
+    <li><strong>It is not a medical device.</strong> It is a research prototype built for an MSc Data
+    Science dissertation and is not for clinical use.</li>
+  </ul>
+
+  <p style="margin-top:26px"><a class="open" href="index.html">Open the validation screen &rarr;</a></p>
+
+  <footer>
+    <p>Research prototype. MSc Data Science dissertation, City St George&rsquo;s, University of
+    London. Not a medical device and not for clinical use. The patient is invented: no real person,
+    record or NHS number appears anywhere on the screen or on this page. Ticks, flags and typed
+    reasons stay in the browser they were entered in.</p>
+    <p>This page describes the screen as it currently stands. If any part of it disagrees with what
+    the screen does, the screen is right and this page is out of date.</p>
+  </footer>
+
+</div>
+</body>
+</html>
