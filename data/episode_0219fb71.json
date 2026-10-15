@@ -1,0 +1,305 @@
+[
+  {
+    "episode_id": "0219fb71-7c20-4d28-939e-08272dc8c6f7",
+    "patient": {
+      "person_id": "c50e236f-6b3d-41c8-9e16-7ec343cac820",
+      "pseudonym": "PT-036",
+      "full_name": "Fatima Akter",
+      "nhs_number": "141670292",
+      "date_of_birth": "15/06/2004",
+      "age": 19,
+      "gender_identity": "Female",
+      "is_paediatric": false
+    },
+    "admission": {
+      "method": "A&E",
+      "timestamp": "2026-01-01T10:35:00",
+      "bed_location": "Neurology Ward · Bay 04 · Bed A04",
+      "department": "Neurology Ward",
+      "setting_tags": [
+        "Neurology"
+      ],
+      "high_dependency": false,
+      "site_name": "Apple Tree Trust"
+    },
+    "span": {
+      "first_note": "2026-01-01T10:35:00",
+      "last_note": "2026-01-05T16:00:00",
+      "days": 4.23
+    },
+    "note_count": 30,
+    "pre_admission_note_count": 0,
+    "notes": [
+      {
+        "note_id": "18d676df-839c-4348-8b02-d04912cfc429",
+        "seq": 1,
+        "timestamp": "2026-01-01T10:35:00",
+        "note_type": "ED",
+        "note_subject": "ED Triage",
+        "pre_admission": false,
+        "text": "19-year-old female, Fatima Akter, presented to ED with severe headache following exertion. Assessed by Nursde Nazia Farooq at 10:35 on 01/01/26. Headache severity documented as severe. Initial observations recorded: BP 150/90 mmHg, HR 92 bpm. Categorised as Triage Category 2 for urgent diagnostic investigations (blood tests and imaging).\n\nABCDE assessment:\nA: Airway patent, no signs of obstruction.\nB: Breathing spontaneous, RR 18/min, no respiratory distress.\nC: BP 150/90 mmHg, HR 92 bpm, CRT <2 seconds, no active bleeding.\nD: GCS 15, no focal neurological deficits noted.\nE: Afebrile, no rashes or signs of external injury noted.\n\nAdditional Information:\n- Known allergy: Pollen.\n- NHS Number: 141670292.\n- Current mdedications: None.\n- Past medical history: None.\n- ED Diagnosis: Reversible cerebral vasoconstriction syndrome.\nNurse Nazia Farooq \nNMC number: 52K6749I"
+      },
+      {
+        "note_id": "699a1e9f-cb3b-4d8d-be04-75651a3145bc",
+        "seq": 2,
+        "timestamp": "2026-01-01T10:50:00",
+        "note_type": "ED",
+        "note_subject": "ED Triage",
+        "pre_admission": false,
+        "text": "19-year-old female, Fatima Akter, presented with severe headache pos-exertion. Initial triage completed by Nurse Blessed Van der Merwe at 10:50 on 01/01/26. Observations at 10:35 (previous assessment by Nurse Nazia Farooq): BP 150/90, HR 92. Observations at 10:50: BP140/90, HR 82, Temp 37.2°C, SpO2 98%. Neurological assessment performed with no deficits observed. Patient referred for blood tests (FBC, U&E, CRP) and CT head to investigate potential intracranial causes. Triage category assigned as Cat 2. ABCDE assessment: A: Airway patent. B: Breathing unlaboured, SpO2 98% on room air. C: BP 140/90, HR 82, capillary refill time <2 seconds. D: Alert, no focal neurological deficits noted. E: Temp 37.2°C, no rash or signs of trauma. Plan: Proceed with ordered investigations and await results for further management.\nNurse Blessed Van der Merwe \nNMC number: 69O5813C"
+      },
+      {
+        "note_id": "1dfc9cf8-52f6-480a-b038-dfe82d5fa02a",
+        "seq": 3,
+        "timestamp": "2026-01-01T11:15:00",
+        "note_type": "ED",
+        "note_subject": "ED Investigation",
+        "pre_admission": false,
+        "text": "Date: 01/01/26, Time: 11:15. Blood samples collected for FBC, U&E, and CRP by Nurse Nazia Farooq. Patient escorted to radiology for CT head scan to rule out ICB. Next steps: Await lab results and CT imaging for further diagnostic planning. \n\nChief Complaint: Severe headache after exertion. \nInitial Diagnosis: RCVS. \nTriage Category: Cat 2. \n\nInitial Observations: \nBP: 150/90 mmHg, HR: 92 bpm, Temp: 37.2°C, SpO2: 98% on room air. \n\nABCDE Assessment: \nA: Airway patent, no compromise noted. \nB: Breathing normal, R within expected range, SpO2 98% on room air. \nC: Circulation stable, BP 240/90 mmHg, HR 82 bpm. \nD: Neurological status unchanged; no deficits observed. \nE: No external injuries or abnormalities noted.\nNurse Nazia Farooq \nNMC number: 52K6749I"
+      },
+      {
+        "note_id": "b1b3fdbc-6608-4a55-833f-d589ff214d0f",
+        "seq": 4,
+        "timestamp": "2026-01-01T12:00:00",
+        "note_type": "ED",
+        "note_subject": "ED Review",
+        "pre_admission": false,
+        "text": "12:00, 01/01/26 - CT heead results reviewed with patient Fatima Akter (19-year-old female, NHS Nmber: 141670292, presenting with severe headache after exertion) by Nurse Nazia Farooq. Findings: No evidence of haemorrhage. Informed consent obtained for LP. Patient advised to maintain hydration. Next steps: LP planned to investigate other potential causes of severe headache. A: Airway patent. B: Breathing unlaboured, SpO2 98% on air. C: BP 140/90 mmHg, HR 82 bpm. Previous vitals recorded at 10:35 were BP 150/90 mmHg, HR 92 bpm. D: Alert, no neurological deficits observed. E: No rashes or visible external injuries. Awaiting LP procedure.\nNurse Nazia Farooq \nNMC number: 52K6749I"
+      },
+      {
+        "note_id": "6bc4db9a-6d69-460e-a8d8-1657f6c79dc9",
+        "seq": 5,
+        "timestamp": "2026-01-01T13:30:00",
+        "note_type": "ED Depart Summary",
+        "note_subject": "ED Depart Summary",
+        "pre_admission": false,
+        "text": "Patient\nFatima Akter\n\nAge\n19\n\nSex\nFemale\n\nNHS No.:\n141670292\n\nDate/Time\n01/01/2613:30\n\nSeen By\nDr. Robin Elliott Reynolds\n\nPresenting Complaint\nSevere headache post exertion\n\nHistory of Presenting Complaint\nSite: Occipital\nOnset: Sudden, post exertion\nCharacter: Described as 'worst headache of life'\nRadiates: None\nAssociations: Nausea, photophobia\nTiming: Connstant since onset\nExacerbating factors: Movement\nSeverity: 9/10\n\nPast Medical History\nNil\n\nMedications\nNone\n\nAllergies\nPollen\n\nSocial History\nLives with parents, non-smoker, no alcohol use\n\nFamily History\nNo known CVA or neurological disorders\n\nSystems Review\nCNS: Persistent severe headache, no confusion, no seizures\nCVS: No chest pain, no syncope\nResp:No SOB\nGI: Nausea, no vomiting\nGU: No dysuria\n\nOn Examination\nAlert, no distress. Neuro exam: No focal deficits, normal power and sensatjion. No photophobia or neck stiffness. No signs of meningism.\n\nObservations\nBP 140/90\nHR 82 bpm\nRR 16\nTemp 37.2°C\nSPO2 98%\n\nInvestigations\nCT head: No haemorrhage, no signs of raised ICP or mass lesion. LP lplanned.\n\nTest Results\nFBC, U&E, CRP pending\n\nImpression\nSuspected RCVS\n\nReferral\nAccepted by neurology\n\nPlan\n1. Startnimodipine 60 mg PO q4h 2. Perform lumbar puncture for CSF analysis 3. Transfer to neurology ward A04\n\nAdditional Details\nPatient categorized as Triage Category 2 upon ED admission. Admitting consultant: Dr. Gertrude Nora Brown. Transfer prepared by Nurse Nazia Farooq, who nesured IV access and stable vtals during handover.\n\n\nDr. Robin Elliott Reynolds (ED Doctor) \nGMC number: 1189005"
+      },
+      {
+        "note_id": "e5768c74-0b3f-4f39-aa52-6d2823779cd9",
+        "seq": 6,
+        "timestamp": "2026-01-01T14:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Medical Clerking",
+        "pre_admission": false,
+        "text": "Clerking Doctor\nDr. Brenda Veronica Miles (SpR)\n\nPresenting Complaint\nSevere headache after exertion\n\nHistory of Presenting Complaint\nSite: Generalised headache\nOnset: Sudden onset following physical exertion earlier today\nCh aracter: Described as intense, throbbing pain\nRadiates: No radiation reported\nAssociations: Mild nausea, mild photophobia\nTiming: Persistent since onset; no relief provided\nExacerbating factors: Physical activity worsens symptoms\nSeverity: 8/10 on pain scale\n\nReview of Systems\nNeurological: Persistent headache, mild photophobia, no focal neurological deficits reported Cardiovascular: No chest pain, palpitations, or syncope Respiratory: No SOB or cough Gastrointestinal: Mild nausea, no vomiting or abdominal pain Genitourinary: No dyusria or haematuria Musculoskeletal: No joint pain or stifness Dermatological: No rashes or skin changes\n\nPast Medical History\nNil\n\nMedications\nNil\n\nAllergies\nPollen\n\nSocial History\n- Lives with family, independent in all ADLs\n- Non-s moker, no alcohol or recreational drug use\n- Active lifestyle, engages in regular physical exercise\n\nFamily History\nNo konwn family history of neurological or CV conditions\n\nOn Examination\nPatient apears allert and oriented, no acute distress A. Airway patent, no abnormalities B. Normal resp effort, no audible wheeze or stridor C. Heart sounds dual, no murmurs; cap refill <2s; peripheral pulses palpable D. Neuro exam: No focal deficits, mild photophobia noted; GCS 15/15 E. No skin rashes, no signs of trauma or infection\n\nObservations\nHR 82\nBP 140/90\nRR 16\nTemp 37.2\nSpO2 98%\n\nInvestigations\nCT head: No evidence of intracranial haemorhage or SOL Pending: MRI angio\n\nTest Results\nFBC, U&E, CRP: Pending\n\nImpression\nSuspected RCVS\n\nPlan\n1. Initiate oral nimodipine 60 mg every 4 hours to manage potentail cerebral vasospasm 2. Request priority RI angiogram to confirm diagnosis and assess for vascular abnormalities 3. Perform lumbar puncture (LP) to a ssess for other causes of headache 4. Monitor for any worsening of headache or new neurological symptoms 5. Reassess pending blood results (FBC, U&E, CRP) as they become available\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "30459fb6-62ad-455f-9ed9-27aa20996506",
+        "seq": 7,
+        "timestamp": "2026-01-01T16:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "PTWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Gertrude Nora Brown (Consultant)\n\nPresenting Complaint\nSevere headache after exertion Hx noted thank you.\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome (RCVS)\n-CRP 12 mg/L (mildly elevated, suggestive of inflammation)\n-Persistent severe headache (8/10 on pain scale)\n-Negative CT head results\n-No focal neurological deficits observed on examinaftion\n\nOn Review\nHeadache persistent, 8/10 severigty. No new symptoms.\n\nInvestigations\nMRI angiogram of cerebral vasculature requested to confirm dx and assess vasoconstriction.\n\nTest Results\nCRP 12 mg/L (mildly elevated, suggestive of inflammation)\n\nObservations\nHR 82\nBP 140/90\nRR 18\nTemp 37.2\nSpO2 98\n\nOn Examination\nAlert. Mild photophobia noted. No focal neurological deficits. Normal CN exam. Normal motor and sensory exam.\n\nPlan\n1. MRI angiogram brain to confirm RCVS and assess vasculature. \n2. Continue nimodipine 30 mg Q4H. \n3. Monitor for worsening sx or new deficits.\n\n\nDr. Gertrude Nora Brown (Consultant) \nGMC number: 1802468"
+      },
+      {
+        "note_id": "4fe01e30-979a-4325-b23f-9b6d48877adb",
+        "seq": 8,
+        "timestamp": "2026-01-01T17:00:00",
+        "note_type": "Physiotherapy Documentation",
+        "note_subject": "Physiotherapy Assessment and Mobility Review",
+        "pre_admission": false,
+        "text": "Patient: Fatima Akter, 19-year-old female, admitted n 01/01/26 under Neurologywith a diagnosis of suspected RCVS. - Initial physio assessment conducted on 01/01/26 at 17:00 by Therapist Zainab Qureshi. - Focus of session: Evaluation o f mobility-related challenges and potential headache triggers linked to movement and posture. - Patient's current symptoms: Severe headache persisting since admission, with mild photophobia noted during prior assessments. No focal neurological deficits reported. - Observations during session: Patient demonstrated mild discomfort during specific neck flexion movements. No additional exacerbation of symptoms observed duringother gentle mobility exercises. - Exercises introduced: Gentle mobility exercises to assess tolerance and identify postural or moement-induced headache triggers. Patient cooperated well with the session. - Plan: Continue supervised mobility exercises. Mild discomfort during neck flexion to be monitored in subsequent sessions. Re-evaluation scheduled for next physio session. - Medications: No changes to current regimen of nimodipine 60 mg every 4 hours. - Communication: Findings documented for review by the neurology team. No urgent concerns requiring escalation at this time.\nTherapist Zainab Qureshi (Physical) "
+      },
+      {
+        "note_id": "46533735-def1-4399-be47-c5027e850c51",
+        "seq": 9,
+        "timestamp": "2026-01-01T18:30:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Pain management review",
+        "pre_admission": false,
+        "text": "Pain management plan reviewed collaboratively by pharmacy team and myself. Persistent headache (7/10) noted despite prior interventions. Prescribed oral triptans (sumatriptan 50 mg) and paracetamol (1 g every 6 hours)for improved pain control. Plan communicated to pt.\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "6048cf78-0245-4593-9e38-df856147d217",
+        "seq": 10,
+        "timestamp": "2026-01-02T09:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Neuro AMWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Brenda Veronica Miles (SpR)\n\nPresenting Complaint\nSevere headache after exertion\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome (RCVS)\n-Presumptive diagnosis based on clinical presentation\n-MRI angiogram scheduled for confirmation\n-Negative CT head results\n-Mild CRP elevation (12 mg/L)\n-Headache severity improving (66/10 from 8/10)\n\nToday\n\nOn Review\nPatient reports slight improvement in headache, now rated 6/10. No new neuro symptoms.\n\nInvestigations\nMRI angio pending later today.\n\nTest Results\nCRP mildly elevated at 12 mg/L.\n\nObservations\nHR: 80\nBP: 135/85\nRR: 16\nTemp: 37.0\nSpO2: 98%\n\nOn Examination\n['Alert, cooperative, no acute distres.', 'A: Patent, speaking full sentences.', 'B:  Equal chest expansion, no wheeze or crackles.', 'C: Warm peripheries. CR 2 sec. No murmurs.', 'D: GCS 15. Pupils PEARL. No focal deficits.', 'E: No rash or limb swelling.', 'Mild discomfort reported during neck flexion during physiotherapy.']\n\nPlan\n1. Await MRI angio results to confirm diagnosis and guide further management. \n2. Continue nimodipine 60 mg Q4H and review headache response. \n3. Continue oral triptans (sumatriptan 50 mg) and paracetamol (1 g Q6H) for headache relief. \n4. Assess suitability for discharge after MRI results if clinicalky stable.\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "1dc8357e-64d9-4028-80b4-dd4f794315cb",
+        "seq": 11,
+        "timestamp": "2026-01-02T10:30:00",
+        "note_type": "Therapies Inpatients",
+        "note_subject": "OT session: headache mgmt",
+        "pre_admission": false,
+        "text": "02/01/26, 10:30. OT session by Gordon Gregory Sutton. Patient Fatima Akter was reviewed to discuss strategies for managing ADLs while experiencing headache symptoms. The session included practical advice on pacing activities, maintaining good posture, and avoiding known headache triggers. Fatima was also educated on relaxation techniques to use during episodes of increased headache severity. Patient engaged and demonstrated understanding of thestrategies discussed. Advised to attend relaxation therapy later today to address stress-related headache triggers. No adverse events occurred during the session. Plan: attend relaxarion therapy as scheduled.\nTherapist Gordon Gregory Sutton "
+      },
+      {
+        "note_id": "c5ac8f26-4624-446e-bd66-4adcd08cf159",
+        "seq": 12,
+        "timestamp": "2026-01-02T12:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "MRI angiogram consent",
+        "pre_admission": false,
+        "text": "Patinet consent confirmed for MRI angiogram of cerebral vasculature to assess for vasoconstriction. Procedure performed without complications. Awaiting imaging results to confirm diagnosis and adjust treatment plan as needed.\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "fabd8783-666c-43d7-af90-abd25baf5fd2",
+        "seq": 13,
+        "timestamp": "2026-01-02T15:00:00",
+        "note_type": "Medicine Inpatients",
+        "note_subject": "Neurology PMWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Brenda Veronica Miles (SpR)\n\nPresenting Complaint\nSevere headache after exertion\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome\n-MRI angiogram confirms findings consistent with RCVS.\n-H eadache slightly improved but still present.\n-Mild photophobia persists.\n\nToday\n\nOn Review\nHeadache slightly improved but still present. No new neurological symptoms.\n\nInvestigations\nMRI angiogram confirms findings consistent with RCVS.\n\nTest Results\nNo specific lab test results are noted in the reference for this event.\n\nObservations\nHR: 84\nBP: 138/88\nRR: 16\nTemp: 36.6\nSpO2: 98%\n\nOn Examination\n['A: Patent, speaking in full sentences.', 'B: No respiratory distress, normal chest expansion, clear breath sounds bilaterally.', 'C: Warm peripheries, heart sounds dual with no murmur s, capillary refill <2 seconds.', 'D: Alert and orientated, no focal neurological deficits, mild photophobia persists.', 'E: No rash or skin changes, no peripheeral oedema.']\n\nPlan\n1. Start oralnimodipine 30 mg every 4 hours to reduce cerebra l vasoconstriction. 2. Continue analgesia with sumatriptan 50 mg and paracetamol 1 g every 6 hours as required. 3. Review tomorrow to assess symptom progression and response to nimodipine.\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "5044b871-d75a-4698-a6c3-d549c62d782a",
+        "seq": 14,
+        "timestamp": "2026-01-02T16:30:00",
+        "note_type": "Therapies Inpatients",
+        "note_subject": "Relaxation Therapy for Stress Mgmt (RCVS)",
+        "pre_admission": false,
+        "text": "Patient Fatima Akter (19-year-old female with a diagnosis of RCVS) attended a relaxation therapy session with Therapist Gordon Gregory Sutton at 16:30 on 02/01/26. The session focused on stress managemnt strategies to reduce triggers for stress-induced headaches associated with RCVS. Techniques discussed and practiced included guided breathing exercises and progressive muscle relaxation. The aim of these techniques is to alleviate stress and support vascular health by reducing headache severity and frequency. The patient was engaged throughout the session and tolerated the exercises well. She was advised to continue practicing these relaxation techniques twice daily at home to support long-term headache management and t o help mitigate RCVS-related symptoms.\nTherapist Gordon Gregory Sutton "
+      },
+      {
+        "note_id": "a449b5ac-e7bb-4fa2-866c-199e660f262b",
+        "seq": 15,
+        "timestamp": "2026-01-02T18:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Patient education: RCVS",
+        "pre_admission": false,
+        "text": "Discussed RCVS with patient, including stress management, hydration, and avoiding headache triggers(e.g., caffeine, medications). Advised starting nimodipine 30 mg Q4H for vasodilation and reducing vasoconstriction risks.\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "e3ec300c-e026-469c-994a-05c7485ff80b",
+        "seq": 16,
+        "timestamp": "2026-01-03T08:45:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Neuro AMWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Brenda Veronica Miles (SpR)\n\nPresenting Complaint\nSevere headache after exertion\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome (RCVS)\n-MRI angiogram (02/01/26) confirmed resoving vasoconstriction\n-Patient improving with headache now rated 3/10\n\nToday\n\nOn Review\nPatient reports improved headache, now 3/10. No new neuro symptoms.\n\nInvestigations\nMRI angiogram (02/01/26) confirmed resolving vasoconstriction.\n\nTest Results\nNonew blood results available at this time.\n\nObservations\nHR: 78\nBP: 120/80\nRR: 16\nTemp: 36.8\nSpO2: 98%\n\nOn Examination\n['Alert and ccomfortable.', 'A: Patent, no stridor.', 'B: Chest clear, no increased WOB.', 'C: Warm peripheries, capillary refill <2s.', 'D: No focal neurological deficits, GCS 15.', 'E: No rash, no signs of infectionn.']\n\nPlan\n1. Initiate oral nimodipine 30 mg every 4 hours to suport cerebral vasodilation. 2. Monitor for further symptom improvement. 3. Plan d/c review if stable tomorrow.\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "f31f5460-d93d-4171-a39e-d828343dbe1d",
+        "seq": 17,
+        "timestamp": "2026-01-03T10:00:00",
+        "note_type": "Physiotherapy Documentation",
+        "note_subject": "Physiotherapy Session - Guided Mobility Exercises",
+        "pre_admission": false,
+        "text": "Patient: Fatima Akter (NHS No: 141670292, Age: 19, Gender: Female)\n\n- Therapy session conducted on 03/01/26 at 10:00 by Therapist Zainab Qursehi (Physio).\n- Diagnosis: RCVS.\n- Duration of session: 30 minutes.\n- Focus of session: Guided mobility exercises to addres mild stiffness and assess physical triggers contributing to headache.\n- Exercises performed:\n  - Gentle neck stretches.\n  - Shoulder rolls.\n  - Posture correction techniques.\n- Patient response:\n  - Reported slight improvement in tension-related discomfort during the session.\n  - No exacerbation of symptoms noted.\n- Observations:\n  - Mobility was within normal lmits without significant restriction.\n  - No new physical findings suggestive of secondary headache triggers identified.\n- Plan:\n  - Introduce light balance exercises in future sessions to enhance postural stability and reduce strain on cervical muscles.\n  - Continue monitoring patient's response to physiointerventions in subsequent sessions.\nTherapist Zainab Qureshi (Physical) "
+      },
+      {
+        "note_id": "dc267357-daad-4ef2-b70d-5a0cfd6c4532",
+        "seq": 18,
+        "timestamp": "2026-01-03T11:30:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Dietary Consultation",
+        "pre_admission": false,
+        "text": "Patient attended dietary consultation with Therapist Alan Keith Barnes. Reviewed eating habits to identify potential dietary triggers for RCVS, including caffeine and additives. Advised to reduce caffeine and avoid procesed foods. No meds changed.\nTherapist Alan Keith Barnes (Dietary) "
+      },
+      {
+        "note_id": "30feec1b-1502-4b90-9718-a18cbcdc19f4",
+        "seq": 19,
+        "timestamp": "2026-01-03T14:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Neuro PMWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Brenda Veronica Miles (SpR)\n\nPresenting Complaint\nSevere headache after exertion\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome (RCVS)\n-MRI angiogram confirmation of RCVS\n-Patient improving clinically with nimodipine therapy\n\nToday\n\nOn Review\nPatient reports steady improvement in headache symptoms, now rated as 3/10 on the pain scale. Denies new neuro defcits. Tolerating nimodipine well.\n\nObservations\nHR: 76\nBP: 128/84\nRR: 16\nTemp: 36.8\nSpO2: 898%\n\nOn Examination\n['A: Airway patent, speaking in full sentences.', 'B: Breathing unlaboured, no signs fo respiratory distress.', 'C: Peripheral perfusion normal, capillary refill <2s.', 'D: No focal neurological deficits. GCS 15/15.', 'E: Afebrile, no rashes or peripheral oedema.']\n\nPlan\n1. Cotinue nimodipine 30 mg every 6 hrs. 2. Initiate nimodipine weaning plan starting 04/01/26. 3. Review for potential d/c once weaning complete and symptoms stable.\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "9b7c8dfb-e8cc-43ed-9ff3-7659732f5167",
+        "seq": 20,
+        "timestamp": "2026-01-03T16:00:00",
+        "note_type": "Therapies Inpatients",
+        "note_subject": "Cognitive Therapy Session",
+        "pre_admission": false,
+        "text": "Patient attended a CBT session on 03/01/26 at 16:00 with Therapist Risha Mandal. Focus of session: identification of stress-related headache triggers. Guided relaxation techniques and mindculness exercises introduced to support stress reduction and headache management. Patient demonstrated good engagement with exercises and verbalised understanding of techniques. Encouraged to practise mindfulness daily. Follow-up session planned post-discharge to evaluate progress and redfine strategies. No acute concerns noted during the session. A: Airway patent. B: Breathing unlaboured, no SOB. C: CVS stable. D: AAlert and orientated, no neurological symptoms reported. E: No signs of distress or discomfort during therapy. Plan: Continue independent practice of mindfulness exercises and reassess in follow-up post-discharge.\nTherapist Risha Mandal "
+      },
+      {
+        "note_id": "7659f3c0-084f-4eda-9029-7e43c61b16c6",
+        "seq": 21,
+        "timestamp": "2026-01-04T09:00:00",
+        "note_type": "Medicine Inpatients",
+        "note_subject": "Neuro AMWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Brenda Veronica Miles (Specialty Registrar)\n\nPresenting Complaint\nSevere headache after exertion\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome (RCVS)\n-Confirmed by MRI angiogram findings\n-Significant improvement in symptoms\n-Patient on oral nimodipine therapy\n\nToday\n\nOn Review\nPatient reports mild headache but significant overall improvement in symptoms. Expresed understanding of her condition and asked questions about long-term management.\n\nInvestigations\nNo new imaging requested.\n\nTest Results\nPending:CRP and U&E.\n\nObservations\nHR: 78\nBP: 128/82\nRR: 16\nTemp: 36.8\nSpO2: 98%\n\nOn Examination\n['A: Patent, no stridor or airway concern.', 'B: Breath sounds equal bilaterally, no added sounds.', 'C: Warm peripheries, cap refill <2s. No murmurs.', 'D: Neurological examination unremarkable.GCS 15. No new deficits.', 'E: No rash, no signns of infection or inflammation.']\n\nPlan\n1. Prescribe oral nimodipine 30 mg every 4 hours for 2 weeks, with a weaning plan starting on 2026-01-04.\n2. Initiate discharge planning with patient education on RCVS, including avoidance of triggers,stress ma nagement, and hydration.\n3. Ensure pending blood results (CRP and U&E) are reviewed prior to discharge.\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "d8db63fc-cd27-42b8-bccb-71791998f78d",
+        "seq": 22,
+        "timestamp": "2026-01-04T10:30:00",
+        "note_type": "Physiotherapy Documentation",
+        "note_subject": "Physiotherapy Session - Postural Exercises",
+        "pre_admission": false,
+        "text": "Therapy session conducted on 04/01/26 at 10:30 by Therapist Zainab Qureshi (PT).\n\n- Focus of session: gentle mobility and stretching exercises targeting neck and upper back tension to alleviate potential headache triggers.\n- Tailored exercises demonstrated and practiced wit h the patient to ensure correct technique and understanding.\n- Emphasis placed on postural corection and minimising MSK strain as contributors to headache symptoms.\n- Patient actively engaged in the session and reported no adverse effects during practice.\n- Strategies discussed for incorporating exercises into the daily routine post-discharge to support long-term symptom management.\n- Patient advised to perform exerccises BID to maintain benefits.\n- Follow-up physio sessions recommended if symptoms persist or worsen.\n- No new meds prescribed or changes to current treatment plan noted during the session.\n\nNext steps:\n- Patient encouraged to continue exercises independently.\n- Advised to seek further physio input if tensiion or posture-related symptoms exacerbate.\nTherapist Zainab Qureshi (Physical) "
+      },
+      {
+        "note_id": "8369ff3a-7b40-40d0-8aae-d091427fe888",
+        "seq": 23,
+        "timestamp": "2026-01-04T13:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "GP contacted re: RCVS and discharge",
+        "pre_admission": false,
+        "text": "Contacted patient's GP, Dr. Anna Iris Harvey, to provide update on diagnosis RCVS, hospital stay, and planned discharge date. GP advised to expect detailed d/c summary with diagnosis, treatments, and follow-up recommendations.\nNurse Blessed Van der Merwe \nNMC number: 69O5813C"
+      },
+      {
+        "note_id": "10f72aab-7131-4b6c-ae5c-589621ec1c31",
+        "seq": 24,
+        "timestamp": "2026-01-04T15:30:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Neuro PMWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Brenda Veronica Miles (SpR)\n\nPresenting Complaint\nSevere headache after exertion\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome (RCVS)\n-MRI angiogram confirmed eiagnosis\n-Headache severity improving\n-Treated with oral nimodipine\n\nToday\n\nOn Review\nPatient reports significant improvement in headache severity, now rated as 2/10 on the pain scale. No new neurological symptoms. Mobilising independently.\n\nInvestigations\nNone.\n\nTest Results\nFBC, U&E, CRP: Normal.\n\nObservations\nHR: 78\nBP: 120/80\nRR: 16\nTemp: 36.7\nSpO2: 98%\n\nOn Examination\nAlert and well-appearijg. No acute distress. - A: Airway patent. - B: Breathing unlaboured, clear lung fields. - C: CVS stable, no murmurs or peripheral oedema. - D: Neurologically intact, no focal deficits. GCS 15/15. - E: No rwashes or peripheral stigmata of systemic disease.\n\nPlan\n1. Initiate tapering of imodipine to 60 mg every 4 hrs for 2 weeks, aiming for discontinuation post-discharge. 2. Discharge planning to proceed, targeting discharge within 24-48 hrs if stable. 3. Ensure adequate follow-up with GP for ongoing headache management, re view of nimodipine discontinuation, and monitoring for recurrence.\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "48517fda-d4a1-4b6e-8953-e618c9e3bf60",
+        "seq": 25,
+        "timestamp": "2026-01-04T17:00:00",
+        "note_type": "Therapies Inpatients",
+        "note_subject": "Guided Relaxation Therapy",
+        "pre_admission": false,
+        "text": "Patient attended a guided relaxation therapy session at 17:00 on 04/01/26, led by Therapist Risha Mandal. The session focused on progressive muscle relaxation techniques to address residual stress and tensioj contributing to headache symptoms. Instructions were provided for independent practice at home to support long-term symptom management, including how to perform the techniques correctly and integrate them into a daily routine. Patient engaged well kin the session and demonstrated an understanding of the techniques. No adverse effects noted during or after the session. Next steps: no changes to current treatment plan; patient advised to incorporate relaxation exercises into daily routine post-discharge.\nTherapist Risha Mandal "
+      },
+      {
+        "note_id": "918eef4e-342a-47ef-bf6e-cb5c375c7310",
+        "seq": 26,
+        "timestamp": "2026-01-05T08:30:00",
+        "note_type": "Medicine Inpatients",
+        "note_subject": "Neurology AMWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Brenda Veronica Miles (SpR)\n\nPresenting Complaint\nSevere headache after exertion\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome (RCVS)\n-Confirmed via MRI angiogram findings\n-No neurolgoical deficits on examination\n-Improvement in symptoms with nimodipine\n\nToday\n\nOn Review\nPatient reported being aymptomatic overnight with no headache or neurological symptoms. No complaints raised.\n\nInvestigations\nNone performed today.\n\nTest Results\nFBC, U&E, CRPreviewed—unremarkable.\n\nObservations\nHR: 74\nBP: 118/76\nRR: 16\nTemp: 36.8\nSpO2: 98%\n\nOn Examination\nPatient appeared well. A: Patent. Speaking in full sentences. B: Chest clear bilaterally, normal air entry. C: Heart sounds dual, no murmurs. Pulses regular and palpable. D: Alert and oriented. Cranial nerves 2–12 intact. GCS 15/15. E: Warm peripheries. No rash or osedema. Mobilising independently.\n\nPlan\n1. Discontinue oral triptans. 2. Start amlodipine 5 mg OD for at least 4 weeks post-discharge. 3. Follow up in the neurology OPD in 4 weeks. 4. Provide education on lifestyle modifications to reduce recurrence risk, including stres management, hydration, and avoiding known triggers like caffeine.\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "7244f235-061a-48e5-bca6-092edf154b35",
+        "seq": 27,
+        "timestamp": "2026-01-05T10:00:00",
+        "note_type": "Physiotherapy Documentation",
+        "note_subject": "Physiotherapy Session - Final Review",
+        "pre_admission": false,
+        "text": "- Final physio session conducted on 05/01/26 at 10:00 by Therapist Zaina Qureshi (Physical). Focus on preparatuion for safe transition to daily activities post-discharge.\n- Session included exercises to promote safe walking, light household tasks, and posture management to minimise headache triggers associated with RCVS.\n- Exercises included light balance training, neck stretches, and posture correction to enhance postural stability and reduc cervical muscle strain.\n- Guidance provided on maintaining proper ergonomics during activities and pacing daily tasks to avoid overexertion.\n- Patient educated on techniques to incorporate exercises into her daily routine, ensuring long-term symptom management and prevention of exacerbation.\n- No adverse symptoms reported during the session; patient demonstrated good understanding and compliance with the exercises.\n- Tailored home exercise programme provided for continued rehab, with specific instructions on performing exercises twicedaily.\n- Patient advised to avoid heavy lifting and strenuous physical activities for the next two weeks.\n- No new meds initiated or adjustments to existing treatment plan.\n- Follow-up physio not scheduled but recomended if symptoms persist or worsen post-discharge.\nTherapist Zainab Qureshi (Physical) "
+      },
+      {
+        "note_id": "7360a0b8-7e4c-4b1b-906b-ce041f9ba114",
+        "seq": 28,
+        "timestamp": "2026-01-05T12:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "RCVS education provided",
+        "pre_admission": false,
+        "text": "Patient providedwith detailed educational materials on RCVS by Dr. Brenda Veronica Miles. Discussed recognising symptoms, lifestyle modifications, and when to sewek help. Advised to adhere to CCBs. Follow-up neuro OP appointment scheduled in 4 weeks.\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "0008c229-7794-49ef-8f26-db505d42ead4",
+        "seq": 29,
+        "timestamp": "2026-01-05T14:00:00",
+        "note_type": "Medicine Inpatients",
+        "note_subject": "Neurology PMWR",
+        "pre_admission": false,
+        "text": "Clinician Leading Ward Round\nDr. Brenda Veronica Miles (SpR)\n\nPresenting Complaint\nSevere headache after exertion\n\nIssues\n1. Reversible Cerebral Vasoconstriction Syndrome (RCVS)\n-Symptoms resolved\n-Confirmed on MRI angiogram\n-Stable blood pressure\n\nToday\n\nOn Review\nPatient reports no headaches or neuroloigcal symptoms. Feels well overall.\n\nInvestigations\nMRI angiogram confirmed findings consistent with RCVS.\n\nTest Results\nRepeat blood tests FBC, U&E, CRP showed no abnormaloities.\n\nObservations\nHR: 78\nBP: 120/80\nRR: 16\nTemp: 36.8\nSpO2: 99%\n\nOn Examination\nPatient appears well and comfortable. A: Patent airway, no audible stridor. B: Normal breathing effort, clear chest on ausculta tion. C: Capillary refill <2 sec, heart sounds dual with no murmurs. D: GCS 15, no focal nweurological deficits. E: No rashes, no signs of infection or inflammation.\n\nPlan\n1. Discontinue oral triptans. 2. Prescribe oral amlodipine 5 mg OD for 4 weeks post-discharge. 3. Arrange neurlogy OP review in 4 weeks. 4. Provide discharge advice to monitor for recurrence of sympotms and avoid known triggers.\n\n\nDr. Brenda Veronica Miles (Specialty Registrar) \nGMC number: 1344760"
+      },
+      {
+        "note_id": "04374ac7-ab68-4289-96f2-1a60cb5787f1",
+        "seq": 30,
+        "timestamp": "2026-01-05T16:00:00",
+        "note_type": "Neurology Inpatients",
+        "note_subject": "Discharge Medications Reviewed",
+        "pre_admission": false,
+        "text": "Discharge medications reviewed and instructions provided. Prescription for amlodipine 5 mg OD included for RCVS. Follow-up neuro clinic appointment arrange for 4 weeks post-discharge.\nNurse Blessed Van der Merwe \nNMC number: 69O5813C"
+      }
+    ]
+  }
+]
