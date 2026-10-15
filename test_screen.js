@@ -9,6 +9,12 @@
    Run after any change to the screen:   node test_screen.js
    Exits non-zero if any check fails, so it can be trusted without reading it.
 
+   WHERE IT LOOKS. The screen and the record it is checked against are looked for next
+   to this file, in either of two layouts, so the suite runs from both without editing:
+     project folder:     designs/Validation_screen.html   pipeline/out/episodes.json
+     public repository:  index.html                       data/episode_0219fb71.json
+   The repository's README gives the steps to install Playwright and run it.
+
    T1  page loads with no console errors, at a desktop size
    T2  the three counters start where they should
    T3  the device gate blocks below 820px wide or 560px tall, and only there
@@ -43,8 +49,19 @@ const { chromium } = require("playwright");
 const fs = require("fs");
 const path = require("path");
 
-const SCREEN = "file://" + path.resolve(__dirname, "designs/Validation_screen.html");
-const EPISODES = path.resolve(__dirname, "pipeline/out/episodes.json");
+const { pathToFileURL } = require("url");
+
+/* the first of the candidate files that exists, relative to this file */
+function pick(...candidates) {
+  const found = candidates.map(c => path.resolve(__dirname, c)).find(p => fs.existsSync(p));
+  if (!found) {
+    console.error(`Cannot find any of: ${candidates.join(", ")}\n(looked next to ${__dirname})`);
+    process.exit(2);
+  }
+  return found;
+}
+const SCREEN = pathToFileURL(pick("designs/Validation_screen.html", "index.html")).href;
+const EPISODES = pick("pipeline/out/episodes.json", "data/episode_0219fb71.json");
 const OFFLINE_OK = /fonts\.googleapis\.com|fonts\.gstatic\.com/;
 
 let pass = 0, fail = 0;
