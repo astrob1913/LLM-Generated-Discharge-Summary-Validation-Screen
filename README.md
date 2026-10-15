@@ -27,6 +27,38 @@ types is stored in their own browser and reaches nobody else.
 |---|---|
 | `index.html` | The validation screen. Self-contained; no build step. |
 | `guide.html` | Companion notes explaining the screen for anyone using it. |
+| `test_screen.js` | The 73 automated checks of the screen (see *Running the checks* below). |
+| `data/episode_0219fb71.json` | The processed record of the patient on the screen, which the checks compare every record card against. |
+| `data/*.csv` | The three synthetic source files: patients, admissions and clinical notes. |
+| `Bhuvanesi_Barua_Source_Code.txt` | All the code written for the project in one file, as submitted with the dissertation. |
+| `Literature_Matrix_and_Design_Log.xlsx` | The literature matrix, error taxonomy and design log kept during the project. |
+
+## Running the checks
+
+The screen is held to 73 automated checks. They open it in a browser and confirm, among other
+things, that every record card matches its note word for word, that each statement shows the
+evidence it declares and that a reviewer's decisions survive a reload.
+
+You need Node.js, version 18 or later (https://nodejs.org).
+
+1. Download this repository (green **Code** button, then **Download ZIP**) and unzip it.
+2. Open a terminal in the unzipped folder, the one that contains `test_screen.js`.
+   On Windows, type `cmd` in the File Explorer address bar of that folder and press Enter.
+3. Install Playwright and its browser. This is needed only once:
+
+   ```
+   npm install playwright
+   npx playwright install chromium
+   ```
+
+4. Run the checks:
+
+   ```
+   node test_screen.js
+   ```
+
+The run takes about a minute and ends with `73 passed, 0 failed`. The run itself needs no internet
+connection.
 
 ## Device requirement
 
@@ -38,3 +70,4 @@ phone cannot do.
 ## Status
 
 Work in progress, ahead of dissertation submission. Not released for reuse.
+
